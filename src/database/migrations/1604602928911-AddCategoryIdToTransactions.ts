@@ -10,7 +10,7 @@ export default class AddCategoryIdToTransactions1604602928911
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.addColumn(
       'transactions',
-      new TableColumn({ name: 'CategoryId', type: 'uuid', isNullable: true }),
+      new TableColumn({ name: 'category_id', type: 'uuid', isNullable: true }),
     );
     await queryRunner.createForeignKey(
       'transactions',
